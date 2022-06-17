@@ -1,48 +1,30 @@
 import { Bars, Language, Times, Theme } from "icons";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { SideMenu } from "components";
+import { useDevice } from 'hooks'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
-  const [isMobile, setIsMobile] = useState(false);
-  const [isMenuClicked, setMenuClicked] = useState(false);
-  const isMounted = useRef(false);
 
-  const checkResolution = () => {
-    if (window.innerWidth < 768) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
+  const [isMenuClicked, setMenuClicked] = useState(false);
+  const { isMobile } = useDevice()
 
   const handleClick = () => setMenuClicked(!isMenuClicked);
 
-  useEffect(() => {
-    isMounted.current = true;
-
-    if (isMounted.current) {
-      window.addEventListener("resize", checkResolution);
-    }
-
-    return () => {
-      isMounted.current = false;
-      window.removeEventListener("resize", checkResolution);
-    };
-  }, [isMobile]);
-
   return (
-    <nav className="bg-transparent flex justify-end absolute right-0 top-0 w-full z-10">
+    <nav className="bg-transparent flex h-screen justify-end absolute right-0 top-0 w-full z-10 overflow-hidden">
       {isMobile ? (
         <>
           <div onClick={handleClick} className="mt-4 mr-4">
             {isMenuClicked ? <Times /> : <Bars />}
           </div>
           <SideMenu isOpen={isMenuClicked}>
-            <ul className="flex flex-col justify-center items-center w-full text-2xl text-white">
-              <li className="m-4">About me</li>
-              <li className="m-4">Work Experience</li>
-              <li className="m-4">Skills</li>
-              <li className="m-4">Contact</li>
+            <ul className="flex flex-col justify-center items-center h-full w-full text-2xl text-white -z-20">
+              <Link className="m-4" to='/' onClick={handleClick}>Home</Link>
+              <Link className="m-4" to='/about' onClick={handleClick}>About me</Link>
+              <Link className="m-4" to='/work' onClick={handleClick}>Work Experience</Link>
+              <Link className="m-4" to='/skills' onClick={handleClick}>Skills</Link>
+              <Link className="m-4" to='/contact' onClick={handleClick}>Contact</Link>
               <li className="m-4">Blog (Soon)</li>
               <li className="m-4 flex justify-center items-center">
                 <Language size={32} />
