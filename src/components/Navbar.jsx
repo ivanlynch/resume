@@ -12,14 +12,14 @@ function Navbar() {
   const handleClick = () => setMenuClicked(!isMenuClicked);
 
   return (
-    <nav className="bg-transparent flex h-screen justify-end absolute right-0 top-0 w-full z-10 overflow-hidden">
+    <div>
       {isMobile ? (
-        <>
-          <div onClick={handleClick} className="mt-4 mr-4">
+        <div className="relative top-0">
+          <div onClick={handleClick} className="mt-4 mr-4 fixed top-0 right-0 z-50">
             {isMenuClicked ? <Times /> : <Bars />}
           </div>
           <SideMenu isOpen={isMenuClicked}>
-            <ul className="flex flex-col justify-center items-center h-full w-full text-2xl text-white -z-20">
+            <ul className="nav-links">
               <Link className="m-4" to='/' onClick={handleClick}>Home</Link>
               <Link className="m-4" to='/about' onClick={handleClick}>About me</Link>
               <Link className="m-4" to='/work' onClick={handleClick}>Work Experience</Link>
@@ -36,11 +36,11 @@ function Navbar() {
               </li>
             </ul>
           </SideMenu>
-        </>
+        </div>
       ) : (
         <></>
       )}
-    </nav>
+    </div>
   );
 }
 

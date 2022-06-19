@@ -6,4 +6,8 @@
     .profile {
         @apply mt-4
     }
+
+    .nav-links {
+        @apply flex flex-col justify-center items-center w-full text-2xl text-white
+    }
 }
