@@ -1,8 +1,12 @@
 import React from 'react'
+import { MobileNavbarHeader } from 'components'
 
 function Work() {
   return (
-    <div>Work</div>
+    <div>
+      <MobileNavbarHeader title={'Work'} subtitle={"My working experience"} />
+      <div>Work</div>
+    </div>
   )
 }
 

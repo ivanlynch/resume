@@ -7,12 +7,11 @@ function Home() {
         <Layout />
         <div className="text-slate-50 font-sans font-semibold h-full flex items-center flex-col">
           <p className="leading-snug font-light text-4xl text-center">
-            Hi, my name is <br />{" "}
-            <span className="text-yellow-400">Iván Lynch</span>, a<br />
-            <span className="text-rose-400 whitespace-nowrap">
-              Software Developer
-            </span>
+            Hello! I'm <span className="text-yellow-400">Iván</span>. 👋
           </p>
+          <span className="text-rose-400 whitespace-nowrap text-xl font-light">
+              Software developer
+          </span>
           <picture className="profile">
             <source
               media="(min-width:640px)"

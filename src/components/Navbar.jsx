@@ -14,8 +14,8 @@ function Navbar() {
   return (
     <div>
       {isMobile ? (
-        <div className="relative top-0">
-          <div onClick={handleClick} className="mt-4 mr-4 fixed top-0 right-0 z-50">
+        <div className="relative top-0 z-50">
+          <div onClick={handleClick} className="mt-4 mr-4 fixed top-0 right-0 z-[calc(9e999)]">
             {isMenuClicked ? <Times /> : <Bars />}
           </div>
           <SideMenu isOpen={isMenuClicked}>

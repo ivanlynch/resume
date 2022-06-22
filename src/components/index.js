@@ -4,6 +4,8 @@ import Navbar from './Navbar'
 import SideMenu from './SideMenu'
 import Layout from './Layout'
 import Background from './Background'
+import MobileNavbarHeader from './MobileNavbarHeader'
+import MobilePage from './MobilePage'
 
 
 export {
@@ -12,5 +14,7 @@ export {
     Navbar,
     SideMenu,
     Layout,
-    Background
+    Background,
+    MobileNavbarHeader,
+    MobilePage
 }

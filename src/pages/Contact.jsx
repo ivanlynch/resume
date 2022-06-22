@@ -1,8 +1,12 @@
+import { MobileNavbarHeader } from 'components'
 import React from 'react'
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <div>
+      <MobileNavbarHeader title={'Contact'} subtitle={'Do you want us to work together?'} />
+      <div>Contact</div>
+    </div>
   )
 }
 

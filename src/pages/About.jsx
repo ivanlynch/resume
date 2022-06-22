@@ -1,46 +1,37 @@
-import { Link } from "react-router-dom";
+import { MobileNavbarHeader, MobilePage } from "components";
 
 function About() {
   return (
     <div className="bg-gray-900 select-text">
-      <div className="sticky top-0 bg-gray-900 z-40 shadow-md">
-        <h1 className="text-4xl text-slate-50 px-4 pt-4">About</h1>
-        <h1 className="text-1xl px-4 text-rose-400 italic pb-4">Who am i?</h1>
-      </div>
-      <div className="bg-gray-800 pt-4 px-4 text-left text-2xl font-light text-slate-50 opacity-90 scroll-smooth">
-      <Link to='/skills'>Here</Link>
+      <MobileNavbarHeader title={"About"} subtitle={"Who am i?"} />
+      <MobilePage>
+        <p className="font-semibold text-4xl pb-4">Hello again! 🙋</p>
+        <figcaption className="text-sm font-light">
+          This is me at 8:00 am 2022/06/22 😄
+        </figcaption>
+        <picture>
+          <source media="(min-width:640px)" srcSet={"./assets/img/ivan.png"} />
+          <img
+            src={"./assets/img/ivan.png"}
+            alt="Rombos"
+            className="rounded-lg mt-2"
+          />
+        </picture>
+        <br />
         <p>
-          I am <b>Iván Lynch</b> an Argentinian 🇦🇷 living in{" "}
-          <span className="whitespace-nowrap">Brazil 🇧🇷</span>. Since beginning
-          my journey as a freelance nearly 8 years ago, i have worked in many
-          different projects as a variety of roles, Frontend Developer,
-          Fullstack Developer, Mobile Developer, Software Architect. you can
-          check more 
+          I am a passionate{" "}
+          <span className="text-yellow-400 font-regular">developer</span> who's
+          always learning new things to bring my best professional version to my
+          clients. I enjoy collaborating with others and create nice things that
+          make users and companies life easier.
         </p>
-        {}
+        <p>
+          <br />I am currently working in a small company based in Argentina as
+          a variety of roles from Software Architect to Lead a small team of
+          developers and coding the rest of the time.
+        </p>
         <br />
-        <p>In my career i done all the projects successfull</p>
-        <br />
-        I'm always learning or researching new things. This year i started to
-        create my own course about javascript that will be released to the end
-        of the year.
-        <br />
-        I'm always learning or researching new things. This year i started to
-        create my own course about javascript that will be released to the end
-        of the year.
-        <br />
-        I'm always learning or researching new things. This year i started to
-        create my own course about javascript that will be released to the end
-        of the year.
-        <br />
-        I'm always learning or researching new things. This year i started to
-        create my own course about javascript that will be released to the end
-        of the year.
-        <br />
-        I'm always learning or researching new things. This year i started to
-        create my own course about javascript that will be released to the end
-        of the year.
-      </div>
+      </MobilePage>
     </div>
   );
 }

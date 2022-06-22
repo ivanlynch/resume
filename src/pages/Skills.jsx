@@ -1,8 +1,12 @@
 import React from 'react'
+import { MobileNavbarHeader } from 'components'
 
 function Skills() {
   return (
-    <div>Skills</div>
+    <div>
+      <MobileNavbarHeader title={'Skills'} subtitle={'What can i do'} />
+      <div>Skills</div>
+    </div>
   )
 }
 
