@@ -2,18 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
 @layer base {
-    html {
-        @apply scroll-smooth
-    }
+  html {
+    @apply scroll-smooth;
+  }
 }
 
 @layer components {
-    .profile {
-        @apply mt-4
-    }
+  .profile {
+    @apply mt-4;
+  }
 
-    .nav-links {
-        @apply flex flex-col justify-center items-center w-full text-2xl text-white
-    }
+  .tabs {
+    @apply h-16 bg-gray-900 w-auto;
+  }
+
+  .tab-item {
+    @apply bg-yellow-400 h-16 items-center w-full;
+  }
+
+  .nav-links {
+    @apply flex flex-col justify-center items-center w-full text-2xl text-white;
+  }
 }

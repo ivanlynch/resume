@@ -1,18 +1,14 @@
 import React from "react";
-import { MobileNavbarHeader } from "components";
+import { MobileNavbarHeader, Tabs } from "components";
 import { useWork } from "hooks";
 
 function Work() {
-  const work = useWork();
+  const [work] = React.useState(useWork());
 
   return (
-    <div>
+    <div className="bg-gray-900">
       <MobileNavbarHeader title={"Work"} subtitle={"My working experience"} />
-      {work.map(({ company }, index) => (
-        <ul>
-          <li>{company}</li>
-        </ul>
-      ))}
+      <Tabs data={work} />
     </div>
   );
 }

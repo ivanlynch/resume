@@ -10,6 +10,7 @@ function Layout({ children }) {
           <img src={"./assets/img/sm-simple.svg"} alt="Rombos" />
         </picture>
       </div>
+      {children}
       <div className="absolute top-0 left-0 animate-pulse">
         <picture>
           <source
