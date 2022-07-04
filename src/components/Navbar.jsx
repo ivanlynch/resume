@@ -12,7 +12,7 @@ function Navbar() {
 
   return (
     <div>
-      {true && (
+      {isMobile && (
         <div className="relative top-0 z-50">
           <div
             onClick={handleClick}
