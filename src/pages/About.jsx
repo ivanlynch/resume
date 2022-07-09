@@ -2,7 +2,7 @@ import { MobileNavbarHeader, MobilePage } from "components";
 
 function About() {
   return (
-    <div className="bg-gray-900 select-text">
+    <div className=" select-text">
       <MobileNavbarHeader title={"About"} subtitle={"Who am i?"} />
       <MobilePage>
         <p className="font-semibold text-4xl pb-4">Hello again! 🙋</p>
@@ -10,6 +10,7 @@ function About() {
           This is me at 8:00 am 2022/06/22 😄
         </figcaption>
         <picture>
+          <source media="(min-width:640px)" srcSet={"./assets/img/ivan.png"} />
           <source media="(min-width:640px)" srcSet={"./assets/img/ivan.png"} />
           <img
             src={"./assets/img/ivan.png"}

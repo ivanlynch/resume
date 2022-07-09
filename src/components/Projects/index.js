@@ -1,5 +1,4 @@
 import { Tags, Text } from "components";
-import { shortDate } from "helpers";
 import React, { useState, useEffect } from "react";
 import shortid from "shortid";
 import Title from "./Title";

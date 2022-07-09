@@ -1,20 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useMemo } from "react";
 import shortid from "shortid";
 
-function Tags({ data, color }) {
-  const [tags, setTags] = useState([]);
-  const [tagsColor, setTagsColor] = useState("");
+function Tags({ data, tagColor, textColor = "text-white-100" }) {
+  const tagsColor = useMemo(() => {
+    return tagColor || "bg-teal-400";
+  }, [tagColor]);
 
-  useEffect(() => {
-    setTags(data || []);
-    setTagsColor(color || "teal");
-  }, [data, color]);
+  const tags = useMemo(() => {
+    return data || [];
+  }, [data]);
 
   return (
     <div className="flex flex-wrap">
-      {tags.map((tag) => (
+      {tags.map((tag, index) => (
         <div
-          className={`px-2 m-2 ${color ? color : "bg-teal-400"} rounded`}
+          className={`${
+            index !== 0 ? "px-2 m-2" : "px-2 m-2 ml-0"
+          } ${tagsColor} ${textColor} rounded`}
           key={shortid.generate()}
         >
           {tag}

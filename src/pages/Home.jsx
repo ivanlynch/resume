@@ -1,10 +1,20 @@
-import { Layout } from "components";
-import { Link } from "react-router-dom";
+import { Avatar, Button, Layout, Tags } from "components";
+import { motion } from "framer-motion";
+import { FaDownload, FaSearch } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
+
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center h-full">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+        className="flex flex-col items-center justify-center h-full"
+      >
         <div className="flex flex-col">
           <div className="flex flex-col items-center md:flex-row md:gap-20 text-slate-50">
             <div className="flex flex-col items-center md:items-start">
@@ -14,33 +24,39 @@ function Home() {
               <span className="text-xl font-light text-rose-400 whitespace-nowrap">
                 Software developer
               </span>
+              <div className="hidden mt-2 md:flex items-center md:items-start flex-col">
+                <p>Currently working with:</p>
+                <Tags
+                  tagColor={`bg-gray-600`}
+                  data={["React", "Tailwind", "GraphQL", "NodeJS"]}
+                />
+              </div>
             </div>
-            <picture className="profile">
-              <source
-                media="(min-width:640px)"
-                srcSet={"./assets/img/sm-profile.png"}
-              />
-              <img src={"./assets/img/sm-profile.png"} alt="Rombos" />
-            </picture>
+            <Avatar src={"./assets/img/sm-profile.png"} />
           </div>
-          <div className="hidden md:block ">
-            <ul className="flex font-medium cursor-pointer gap-10 text-slate-50">
-              <Link className="hover:bg-rose-400" to={"/about"}>
-                About
-              </Link>
-              <Link to={"/skills"} className="hover:bg-rose-400">
-                Skills
-              </Link>
-              <Link to={"/work"} className="hover:bg-rose-400">
-                Work
-              </Link>
-              <Link to={"/contact"} className="hover:bg-rose-400">
-                Contact
-              </Link>
-            </ul>
+          <div className="text-slate-50 md:hidden flex mt-2 items-center md:items-start flex-col">
+            <p>Currently working with:</p>
+            <Tags
+              tagColor={`bg-gray-600`}
+              data={["React", "Tailwind", "GraphQL", "NodeJS"]}
+            />
+          </div>
+          <div className="hidden w-full md:flex mt-8 md:gap-2 md:items-center box-border">
+            <Button
+              onClick={() => navigate("/about")}
+              icon={<FaSearch size={18} />}
+              fontSize={`text-xl`}
+              text="See more"
+            />
+            <Button
+              icon={<FaDownload size={18} />}
+              text="Resume"
+              outlined={true}
+              fontSize={`text-xl`}
+            />
           </div>
         </div>
-      </div>
+      </motion.div>
     </Layout>
   );
 }
