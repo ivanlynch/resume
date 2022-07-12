@@ -1,15 +1,17 @@
 import React from "react";
 import { Navbar, AnimatedRoutes } from "components";
-import { ThemeContextProvider } from "contexts";
+import { AppContextProvider } from "contexts";
 import { BrowserRouter } from "react-router-dom";
+import { useDevice } from "hooks";
 
 function App() {
+  const { isMobile } = useDevice();
   return (
     <BrowserRouter>
-      <ThemeContextProvider>
-        <Navbar />
+      <AppContextProvider>
+        <Navbar isMobile={isMobile} />
         <AnimatedRoutes />
-      </ThemeContextProvider>
+      </AppContextProvider>
     </BrowserRouter>
   );
 }

@@ -1,13 +1,16 @@
-import React from 'react'
-import { MobileNavbarHeader } from 'components'
+import React from "react";
+import { Page, Title } from "components";
+import { useDevice } from "hooks";
 
 function Skills() {
+  const { isMobile } = useDevice();
   return (
-    <div>
-      <MobileNavbarHeader title={'Skills'} subtitle={'What can i do'} />
-      <div>Skills</div>
-    </div>
-  )
+    <Page
+      isMobile={isMobile}
+      header={<Title title={"Skills"} subtitle={"What can i do"} />}
+      content={<div>Skills</div>}
+    />
+  );
 }
 
-export default Skills
+export default Skills;

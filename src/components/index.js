@@ -4,8 +4,8 @@ import Navbar from "./Navbar";
 import SideMenu from "./SideMenu";
 import Layout from "./Layout";
 import Background from "./Background";
-import MobileNavbarHeader from "./MobileNavbarHeader";
-import MobilePage from "./MobilePage";
+import Title from "./Title";
+import Page from "./Page";
 import Tabs from "./Tabs";
 import Tags from "./Tags";
 import Projects from "./Projects";
@@ -21,8 +21,8 @@ export {
   SideMenu,
   Layout,
   Background,
-  MobileNavbarHeader,
-  MobilePage,
+  Title,
+  Page,
   Tabs,
   Tags,
   Projects,

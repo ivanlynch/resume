@@ -1,13 +1,21 @@
-import { MobileNavbarHeader } from 'components'
-import React from 'react'
+import { Page, Title } from "components";
+import { useDevice } from "hooks";
+import React from "react";
 
 function Contact() {
+  const { isMobile } = useDevice();
   return (
-    <div>
-      <MobileNavbarHeader title={'Contact'} subtitle={'Do you want us to work together?'} />
-      <div>Contact</div>
-    </div>
-  )
+    <Page
+      isMobile={isMobile}
+      header={
+        <Title
+          title={"Contact"}
+          subtitle={"Do you want us to work together?"}
+        />
+      }
+      content={<div>Contact</div>}
+    />
+  );
 }
 
-export default Contact
+export default Contact;

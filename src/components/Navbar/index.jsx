@@ -1,10 +1,5 @@
 import Mobile from "./Mobile";
-import { useDevice } from "hooks";
 
-function Index() {
-  const { isMobile } = useDevice();
-
-  return <div>{isMobile && <Mobile />}</div>;
+export default function Navbar({ isMobile }) {
+  return <>{isMobile && <Mobile />}</>;
 }
-
-export default Index;

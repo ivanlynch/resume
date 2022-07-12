@@ -1,7 +1,3 @@
-import {ThemeContext, ThemeContextProvider} from "./ThemeContext";
+import { AppContext, AppContextProvider } from "./AppContext";
 
-
-export {
-    ThemeContextProvider,
-    ThemeContext
-}
+export { AppContextProvider, AppContext };

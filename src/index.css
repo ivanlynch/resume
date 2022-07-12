@@ -16,7 +16,7 @@
 
 @layer base {
   html {
-    @apply scroll-smooth;
+    @apply scroll-smooth bg-gray-900;
   }
 }
 

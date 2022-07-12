@@ -1,15 +1,17 @@
 import React from "react";
-import { MobileNavbarHeader, Tabs } from "components";
-import { useWork } from "hooks";
+import { Title, Tabs, Page } from "components";
+import { useDevice, useWork } from "hooks";
 
 function Work() {
   const [work] = React.useState(useWork());
+  const { isMobile } = useDevice();
 
   return (
-    <div className="bg-gray-900">
-      <MobileNavbarHeader title={"Work"} subtitle={"My working experience"} />
-      <Tabs data={work} />
-    </div>
+    <Page
+      isMobile={isMobile}
+      header={<Title title={"Work"} subtitle={"My working experience"} />}
+      content={<Tabs data={work} />}
+    />
   );
 }
 
