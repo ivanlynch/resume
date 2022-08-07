@@ -12,10 +12,20 @@ function About() {
       }
       content={
         <div className="h-full">
-          <p className="font-semibold text-4xl pb-4">Hello again! 🙋</p>
-          <figcaption className="text-sm font-light">
-            This is me at 8:00 am 2022/06/22 😄
-          </figcaption>
+          <span className="mb-2 text-sm leading-6 font-semibold text-rose-400">About</span>
+          <p className="title">A little bit of me</p>
+
+
+          <br />
+          <p className="prose-slate text-slate-400">
+            I was always curious about practically everything. It started as a kid disassembling toys with batteries and engines, trying to create new things with his parts. Some years after, I moved the focus to my first computer, which I broke many times just trying to improve. As a teenager, I started learning basic programming skills in books when the Internet was expensive (dial-up connection). Some years after working as a freelancer finally got my first experience in a startup at the age of 23, where I was so excited to learn more and work with experienced people.
+          </p>
+          <p>
+            <br />Years later, after working on many projects without focusing on a role and doing many things, I took a breath to focus my career on Mobile and Web development.
+
+          </p>
+          <br />
+          <p>In 2018 i traveled to Sao Paulo, Brazil, for a project where it was a life changer for me</p>
           <div className="rounded-full mt-2 object-fill object-center">
             <picture>
               <source
@@ -29,20 +39,6 @@ function About() {
               />
             </picture>
           </div>
-          <br />
-          <p>
-            I am a passionate{" "}
-            <span className="text-yellow-400 font-regular">developer</span>{" "}
-            who's always learning new things to bring my best professional
-            version to my clients. I enjoy collaborating with others and create
-            nice things that make users and companies life easier.
-          </p>
-          <p>
-            <br />I am currently working in a small company based in Argentina
-            as a variety of roles from Software Architect to Lead a small team
-            of developers and coding the rest of the time.
-          </p>
-          <br />
         </div>
       }
     ></Page>

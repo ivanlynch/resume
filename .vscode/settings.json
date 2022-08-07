@@ -1,5 +1,8 @@
 {
- "editor.wordWrap": "on",
- "editor.wordWrapColumn": 80,
- "editor.formatOnSave": true
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 80,
+    "editor.formatOnSave": true,
+    "css.customData": [
+        ".vscode/css_custom_data.json"
+    ]
 }

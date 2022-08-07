@@ -35,11 +35,11 @@ export default function Layout({ header, content }) {
   return (
     <div className="grid grid-cols-12 gap-4 h-screen bg-gray-900 p-4">
       <div className="col-span-2">
-        <div className="bg-gray-800 h-full rounded-xl grid grid-rows-6">
+        <div className="bg-slate-800 h-full rounded-xl grid grid-rows-6">
           <header className="row-span-1 flex flex-col items-left justify-center pl-4">
             {header}
           </header>
-          <nav className="bg-gray-700 row-span-5 rounded-2xl shadow-2xl flex flex-col items-left pt-16 pl-8 text-slate-50">
+          <nav className="bg-slate-700 row-span-5 rounded-2xl shadow-2xl flex flex-col items-left pt-16 pl-8 text-slate-50">
             {links.map(({ link, description, icon }, index) => (
               <Link
                 className="text-xl py-1 hover:text-rose-400 hover:animate-pulse"

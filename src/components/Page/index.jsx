@@ -17,8 +17,8 @@ function index({ isMobile, header, content }) {
     <Layout
       header={header}
       content={
-        <div className="bg-gray-900 h-full text-left text-2xl font-light text-slate-50 opacity-90 scroll-smooth">
-          <main className="bg-gray-800 p-16 rounded-2xl h-full overflow-auto">{content}</main>
+        <div className="bg-slate-900 h-full text-left text-2xl font-light text-slate-50 opacity-90 scroll-smooth">
+          <main className="bg-slate-900 p-8 rounded-2xl h-full overflow-auto">{content}</main>
         </div>
       }
     />
