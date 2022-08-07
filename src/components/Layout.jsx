@@ -33,8 +33,8 @@ const links = [
 
 export default function Layout({ header, content }) {
   return (
-    <div className="grid grid-cols-12 h-screen bg-gray-900">
-      <div className="col-span-2 pt-4 px-4">
+    <div className="grid grid-cols-12 gap-4 h-screen bg-gray-900 p-4">
+      <div className="col-span-2">
         <div className="bg-gray-800 h-full rounded-xl grid grid-rows-6">
           <header className="row-span-1 flex flex-col items-left justify-center pl-4">
             {header}
@@ -55,7 +55,7 @@ export default function Layout({ header, content }) {
           </nav>
         </div>
       </div>
-      <main class="col-span-10 overflow-auto">{content}</main>
+      <main className="col-span-10 overflow-auto h-full">{content}</main>
     </div>
   );
 }

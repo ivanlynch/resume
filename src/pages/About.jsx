@@ -3,7 +3,7 @@ import { useDevice } from "hooks";
 
 function About() {
   const { isMobile } = useDevice();
-  console.log(isMobile);
+
   return (
     <Page
       isMobile={isMobile}
@@ -11,7 +11,7 @@ function About() {
         <Title isMobile={isMobile} title={"About"} subtitle={"Who am i?"} />
       }
       content={
-        <>
+        <div className="h-full">
           <p className="font-semibold text-4xl pb-4">Hello again! 🙋</p>
           <figcaption className="text-sm font-light">
             This is me at 8:00 am 2022/06/22 😄
@@ -43,7 +43,7 @@ function About() {
             of developers and coding the rest of the time.
           </p>
           <br />
-        </>
+        </div>
       }
     ></Page>
   );
