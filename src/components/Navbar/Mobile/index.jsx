@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { SideMenu } from "components";
 import { Link } from "react-router-dom";
-import { Language, Theme, Times, Bars } from "icons";
+import {
+  Bars3Icon as Bars,
+  XMarkIcon as Times,
+} from "@heroicons/react/24/outline";
 
 function Index() {
   const [isMenuClicked, setMenuClicked] = useState(false);
@@ -14,7 +17,7 @@ function Index() {
         onClick={handleClick}
         className="mt-4 mr-4 fixed top-0 right-0 z-[calc(9e999)]"
       >
-        {isMenuClicked ? <Times /> : <Bars />}
+        {isMenuClicked ? <Times height={40} /> : <Bars height={40} />}
       </div>
       <SideMenu isOpen={isMenuClicked}>
         <ul className="nav-links">
@@ -35,11 +38,11 @@ function Index() {
           </Link>
           <li className="m-4">Blog (Soon)</li>
           <li className="flex items-center justify-center m-4">
-            <Language size={32} />
+            {/* <Language size={32} /> */}
             <p className="px-4 whitespace-nowrap">Change Language</p>
           </li>
           <li className="flex items-center justify-center m-4">
-            <Theme size={32} />
+            {/* <Theme size={32} /> */}
             <p className="px-4 whitespace-nowrap">Change Theme</p>
           </li>
         </ul>

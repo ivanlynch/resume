@@ -10,8 +10,8 @@ import Tabs from "./Tabs";
 import Tags from "./Tags";
 import Projects from "./Projects";
 import Text from "./Text";
-import AnimatedRoutes from "./AnimatedRoutes";
 import Avatar from "./Avatar";
+import Image from "./Image";
 
 export {
   Avatar,
@@ -27,5 +27,5 @@ export {
   Tags,
   Projects,
   Text,
-  AnimatedRoutes,
+  Image,
 };

@@ -16,7 +16,20 @@
 
 @layer base {
   html {
-    @apply scroll-smooth bg-slate-200 dark:bg-slate-900 dark:text-slate-200;
+    @apply h-screen w-screen scroll-smooth bg-slate-200 dark:bg-slate-900 dark:text-slate-200;
+  }
+
+  body,
+  #root {
+    @apply h-full md:w-[65%] m-auto w-full;
+  }
+
+  details[open] summary ~ * {
+    @apply transition duration-1000 ease-in;
+  }
+
+  summary {
+    @apply cursor-pointer;
   }
 }
 

@@ -1,5 +1,3 @@
-const CONSTANTS = {
-    GREETINGS: "Hello there 👋, I am Iván, a Fullstack Developers."
-}
+import { Size } from "./size";
 
-export default CONSTANTS;
+export { Size };

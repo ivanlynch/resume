@@ -1,39 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function index() {
+const Desktop = () => {
   return (
-    <nav className="flex font-medium cursor-pointer gap-10 text-slate-50">
-      <Link
-        type="button"
-        className="hover:border-b-4 hover:-mb-1 hover:border-rose-400"
-        to={"/about"}
-      >
-        About
-      </Link>
-      <Link
-        type="button"
-        to={"/skills"}
-        className="hover:border-b-4 hover:-mb-1 hover:border-rose-400"
-      >
-        Skills
-      </Link>
-      <Link
-        type="button"
-        to={"/work"}
-        className="hover:border-b-4 hover:-mb-1 hover:border-rose-400"
-      >
-        Work
-      </Link>
-      <Link
-        type="button"
-        to={"/contact"}
-        className="hover:border-b-4 hover:-mb-1 hover:border-rose-400"
-      >
-        Contact
-      </Link>
-    </nav>
+    <div className="w-full flex justify-center h-[10%]">
+      <nav className="flex justify-between items-center font-medium cursor-pointer gap-10 text-slate-50">
+        <Link
+          type="button"
+          className="hover:border-b-4 hover:-mb-1 hover:border-rose-400"
+          to={"/"}
+        >
+          Home
+        </Link>
+        <Link
+          type="button"
+          className="hover:border-b-4 hover:-mb-1 hover:border-rose-400"
+          to={"/about"}
+        >
+          About
+        </Link>
+        <Link
+          type="button"
+          to={"/experience"}
+          className="hover:border-b-4 hover:-mb-1 hover:border-rose-400"
+        >
+          Experience
+        </Link>
+        <Link
+          type="button"
+          to={"/contact"}
+          className="hover:border-b-4 hover:-mb-1 hover:border-rose-400"
+        >
+          Contact
+        </Link>
+      </nav>
+    </div>
   );
-}
+};
 
-export default index;
+export { Desktop };

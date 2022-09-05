@@ -1,7 +1,7 @@
 import React from "react";
 
-function Text({ text }) {
-  return <p className="text-lg text-left opacity-80">{text}</p>;
-}
+const Text = ({ children }) => {
+  return <p className="prose-slate text-lg text-slate-400 mb-8">{children}</p>;
+};
 
-export default Text;
+export { Text as default };

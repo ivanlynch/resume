@@ -1,18 +1,22 @@
 import React from "react";
-import { Navbar, AnimatedRoutes } from "components";
+import { Navbar } from "components";
 import { AppContextProvider } from "contexts";
-import { BrowserRouter } from "react-router-dom";
-import { useDevice } from "hooks";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { About, Contact, Home, Experience } from "pages";
 
 function App() {
-  const { isMobile } = useDevice();
+  const location = useLocation();
+
   return (
-    <BrowserRouter>
-      <AppContextProvider>
-        <Navbar isMobile={isMobile} />
-        <AnimatedRoutes />
-      </AppContextProvider>
-    </BrowserRouter>
+    <AppContextProvider>
+      <Navbar />
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </AppContextProvider>
   );
 }
 

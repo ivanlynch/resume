@@ -1,13 +1,6 @@
 import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
-import Skills from "./Skills";
-import Work from "./Work";
+import Experience from "./Experience";
 
-export {
-    Home,
-    About,
-    Contact,
-    Skills,
-    Work
-}
+export { Home, About, Contact, Experience };

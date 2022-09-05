@@ -1,12 +1,14 @@
+import { Size } from "constants";
 import React from "react";
 
-export default function Title({ title, subtitle }) {
-  return (
-    <div className="ml-4">
-      <h1 className="title">{title || "Title"}</h1>
-      <p className="info text-rose-400">
-        <em>{subtitle || "Subtitle"}</em>
-      </p>
-    </div>
-  );
-}
+const Title = ({ children, size }) => {
+  if (size === Size.H1) {
+    return <h1 className="text-2xl py-2">{children}</h1>;
+  }
+
+  if (size === Size.H2) {
+    return <h2 className="text-xl py-2">{children}</h2>;
+  }
+};
+
+export { Title as default };
