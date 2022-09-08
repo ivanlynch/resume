@@ -4,7 +4,7 @@ const Image = ({ src, alt }) => {
   return (
     <picture>
       <source media="(min-width:640px)" srcSet={src} />
-      <img src={src} alt={alt} className="object-fill h-96 my-4" />
+      <img src={src} alt={alt} className="object-scale-down h-96 my-4" />
     </picture>
   );
 };

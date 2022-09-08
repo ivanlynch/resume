@@ -9,7 +9,7 @@ const Work = () => {
   return (
     <div>
       <Title size={Size.H1}>Where I've Worked</Title>
-      <Tabs data={work} />
+      <Tabs className={"mt-8"} data={work} />
     </div>
   );
 };

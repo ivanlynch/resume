@@ -4,7 +4,7 @@ import { Holidays } from "images";
 
 function About() {
   return (
-    <div className="h-full">
+    <div className="h-full mt-24 p-4 md:mt-0">
       <Title size={Size.H1}>TL;DR</Title>
       <Text>
         I'm an Argentinian software developer, currently living in Brazil and

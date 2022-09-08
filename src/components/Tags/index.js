@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import shortid from "shortid";
+import { nanoid } from "nanoid";
 
 function Tags({ data, tagColor, textColor = "text-white-100" }) {
   const tagsColor = useMemo(() => {
@@ -17,7 +17,7 @@ function Tags({ data, tagColor, textColor = "text-white-100" }) {
           className={`${
             index !== 0 ? "px-2 m-2" : "px-2 m-2 ml-0"
           } ${tagsColor} ${textColor} rounded`}
-          key={shortid.generate()}
+          key={nanoid()}
         >
           {tag}
         </div>

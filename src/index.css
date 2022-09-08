@@ -24,12 +24,12 @@
     @apply h-full md:w-[65%] m-auto w-full;
   }
 
-  details[open] summary ~ * {
-    @apply transition duration-1000 ease-in;
+  details summary div svg {
+    @apply transform origin-center rotate-0 transition-transform duration-300;
   }
 
-  summary {
-    @apply cursor-pointer;
+  details[open] summary div svg {
+    @apply transform origin-center -rotate-180 transition-transform duration-300;
   }
 }
 

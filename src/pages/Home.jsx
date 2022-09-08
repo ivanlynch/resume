@@ -1,16 +1,9 @@
 import { Avatar, Button, Tags } from "components";
-import { motion } from "framer-motion";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 
 function Home() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
-      className="flex items-center justify-center h-[90%] w-full"
-    >
+    <div className="flex items-center justify-center h-[90%] w-full">
       <div className="flex flex-col">
         <div className="flex flex-col items-center md:flex-row md:gap-20 text-slate-50">
           <div className="flex flex-col gap-10 items-center md:items-start">
@@ -50,7 +43,7 @@ function Home() {
           />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
