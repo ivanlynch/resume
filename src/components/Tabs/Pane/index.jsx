@@ -1,5 +1,5 @@
 import React from "react";
-import { Projects, Text, Title } from "components";
+import { Text, Title } from "components";
 import { Size } from "constants";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 

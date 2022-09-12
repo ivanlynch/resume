@@ -27,11 +27,8 @@ function Index() {
           <Link className="m-4" to="/about" onClick={handleClick}>
             About me
           </Link>
-          <Link className="m-4" to="/work" onClick={handleClick}>
-            Work Experience
-          </Link>
-          <Link className="m-4" to="/skills" onClick={handleClick}>
-            Skills
+          <Link className="m-4" to="/experience" onClick={handleClick}>
+            Experience
           </Link>
           <Link className="m-4" to="/contact" onClick={handleClick}>
             Contact

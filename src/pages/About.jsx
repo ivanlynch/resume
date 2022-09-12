@@ -12,8 +12,7 @@ function About() {
         <b className="text-yellow-400">
           Fullstack Developer with React, React-Native and NodeJS
         </b>{" "}
-        at Sales Journey a SaaS Lead-to-Cash platform and writing things that
-        aren't published yet.
+        .
       </Text>
       <Title size={Size.H1}>About</Title>
       <Image src={Holidays} alt={"jeriquacuara"} />

@@ -1,20 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Desktop = () => {
+const Desktop = ({ pathname }) => {
+  const handleActiveLink = (path) => {
+    if (pathname === path) {
+      return "active";
+    } else {
+      return "";
+    }
+  };
+
   return (
     <div className="w-full flex justify-center h-[10%]">
       <nav className="flex justify-between items-center font-medium cursor-pointer gap-10 text-slate-50">
         <Link
           type="button"
-          className="hover:border-b-4 hover:-mb-1 hover:border-rose-400"
+          className={`links ${handleActiveLink("/")}`}
           to={"/"}
         >
           Home
         </Link>
         <Link
           type="button"
-          className="hover:border-b-4 hover:-mb-1 hover:border-rose-400"
+          className={`links ${handleActiveLink("/about")}`}
           to={"/about"}
         >
           About
@@ -22,14 +30,14 @@ const Desktop = () => {
         <Link
           type="button"
           to={"/experience"}
-          className="hover:border-b-4 hover:-mb-1 hover:border-rose-400"
+          className={`links ${handleActiveLink("/experience")}`}
         >
           Experience
         </Link>
         <Link
           type="button"
           to={"/contact"}
-          className="hover:border-b-4 hover:-mb-1 hover:border-rose-400"
+          className={`links ${handleActiveLink("/contact")}`}
         >
           Contact
         </Link>

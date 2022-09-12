@@ -1,20 +1,39 @@
-import { Page, Title } from "components";
-import { useDevice } from "hooks";
+import { EnvelopeIcon, CalendarIcon } from "@heroicons/react/24/outline";
+import { CardButton, Text, Title } from "components";
+import { Size } from "constants";
 import React from "react";
 
 function Contact() {
-  const { isMobile } = useDevice();
+  const handleSendMail = (event) => {
+    window.location.href =
+      "mailto:mail@ivanlynch.me?subject=Hey Iván, i want to talk to you about...";
+    event.preventDefault();
+  };
+
+  const handleGoToCalendar = () => {
+    window.open("https://calendly.com/ivanlynch/30min", "_blank");
+  };
+
   return (
-    <Page
-      isMobile={isMobile}
-      header={
-        <Title
-          title={"Contact"}
-          subtitle={"Do you want us to work together?"}
+    <div className="h-full w-full">
+      <Title size={Size.H1}>Get In Touch</Title>
+      <Text>
+        I'm always open to new opportunities, so if you have any questions or
+        have a project you'd like to discuss, please feel free to contact me.
+      </Text>
+      <div className="w-full flex gap-10">
+        <CardButton
+          onClick={handleSendMail}
+          text={"Send me an email"}
+          icon={<EnvelopeIcon height={"12rem"} />}
         />
-      }
-      content={<div>Contact</div>}
-    />
+        <CardButton
+          onClick={handleGoToCalendar}
+          text={"Schedule a meeting"}
+          icon={<CalendarIcon height={"12rem"} />}
+        />
+      </div>
+    </div>
   );
 }
 

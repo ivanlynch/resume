@@ -58,4 +58,12 @@
   .nav-links {
     @apply flex flex-col justify-center items-center w-full text-2xl text-white;
   }
+
+  .links {
+    @apply hover:border-b-4 hover:-mb-1 hover:border-rose-400;
+  }
+
+  .active {
+    @apply border-b-4 -mb-1 border-rose-400;
+  }
 }

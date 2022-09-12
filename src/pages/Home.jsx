@@ -12,7 +12,7 @@ function Home() {
                 Hello! I'm <span className="text-yellow-400">Iván</span>. 👋
               </p>
               <span className="info text-rose-400 whitespace-nowrap">
-                Software developer
+                I build things on the internet
               </span>
             </div>
             <div className="hidden mt-2 md:flex items-center md:items-start flex-col">
