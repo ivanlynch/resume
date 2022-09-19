@@ -1,5 +1,5 @@
 import { EnvelopeIcon, CalendarIcon } from "@heroicons/react/24/outline";
-import { CardButton, Text, Title } from "components";
+import { CardButton, Text, Title, Page } from "components";
 import { Size } from "constants";
 import React from "react";
 
@@ -15,25 +15,27 @@ function Contact() {
   };
 
   return (
-    <div className="h-full w-full">
-      <Title size={Size.H1}>Get In Touch</Title>
-      <Text>
-        I'm always open to new opportunities, so if you have any questions or
-        have a project you'd like to discuss, please feel free to contact me.
-      </Text>
-      <div className="w-full flex gap-10">
-        <CardButton
-          onClick={handleSendMail}
-          text={"Send me an email"}
-          icon={<EnvelopeIcon height={"12rem"} />}
-        />
-        <CardButton
-          onClick={handleGoToCalendar}
-          text={"Schedule a meeting"}
-          icon={<CalendarIcon height={"12rem"} />}
-        />
+    <Page id={"contact"}>
+      <div className="h-screen w-full flex flex-col justify-center items-start">
+        <Title size={Size.H1}>Get In Touch</Title>
+        <Text>
+          I'm always open to new opportunities, so if you have any questions or
+          have a project you'd like to discuss, please feel free to contact me.
+        </Text>
+        <div className="w-full flex gap-10 md:scale-100 scale-75 -m-10 md:m-0">
+          <CardButton
+            onClick={handleSendMail}
+            text={"Send me an email"}
+            icon={<EnvelopeIcon height={"12rem"} />}
+          />
+          <CardButton
+            onClick={handleGoToCalendar}
+            text={"Schedule a meeting"}
+            icon={<CalendarIcon height={"12rem"} />}
+          />
+        </div>
       </div>
-    </div>
+    </Page>
   );
 }
 

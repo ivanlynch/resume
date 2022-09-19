@@ -1,3 +1,3 @@
-import { Size } from "./size";
+import { Size } from "./size.js";
 
 export { Size };

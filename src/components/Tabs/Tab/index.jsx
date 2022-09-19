@@ -5,10 +5,10 @@ function Tab({ title, isActive, onClick }) {
     <li className="mr-2 w-full">
       <button
         onClick={onClick}
-        className={`transition-colors duration-300 inline-block p-4 w-full rounded-t-lg border-b-2 border-transparent whitespace-nowrap ${
+        className={`p-4 w-full rounded-t-lg border-b-2 whitespace-nowrap ${
           isActive
-            ? "text-slate-400 border-slate-400 "
-            : "text-slate-500 opacity-50"
+            ? "text-teal-400 border-teal-400 border-b-[4px]"
+            : "text-slate-400 opacity-70"
         } `}
       >
         {title.toUpperCase()}

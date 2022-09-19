@@ -1,5 +1,6 @@
 export const work = [
   {
+    isCurrent: true,
     company: "Sales Journey",
     roles: "Senior Fullstack Developer",
     from: "2022",
@@ -9,6 +10,7 @@ export const work = [
     technologies: ["React", "React Native", "TypeScript", "AWS"],
   },
   {
+    isCurrent: false,
     company: "Osh Pro",
     roles: "Senior Software Developer",
     from: "2019",
@@ -25,6 +27,7 @@ export const work = [
     ],
   },
   {
+    isCurrent: false,
     company: "NEORIS",
     roles: "Senior Mobile Developer",
     from: "2018",
@@ -34,6 +37,7 @@ export const work = [
     technologies: ["Node.js", "Cordova", "Javascript", "OpenUI5"],
   },
   {
+    isCurrent: false,
     company: "Inclusion Services S.A.",
     roles: "Consultant & Developer",
     from: "2015",

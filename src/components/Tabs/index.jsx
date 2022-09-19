@@ -8,9 +8,7 @@ function Tabs({ data, className }) {
   const [activeTabIndex, setActiveTabIndex] = React.useState(0);
 
   return (
-    <div
-      className={`px-2 text-sm font-medium text-left  text-gray-500  w-full ${className}`}
-    >
+    <div className={`text-sm font-medium text-left text-gray-500 ${className}`}>
       <ul className="flex flex-nowrap overflow-scroll no-scrollbar -mb-px w-full">
         {tabs.map(({ company }, index) => (
           <Tab

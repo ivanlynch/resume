@@ -17,6 +17,7 @@ const theme = {
 export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
+  const [currentHash, setCurrentHash] = useState("");
   const [state, setState] = useState({
     ...theme,
   });
@@ -26,7 +27,9 @@ export const AppContextProvider = ({ children }) => {
   };
 
   return (
-    <AppContext.Provider value={{ theme, toggleTheme }}>
+    <AppContext.Provider
+      value={{ theme, toggleTheme, currentHash, setCurrentHash }}
+    >
       {children}
     </AppContext.Provider>
   );

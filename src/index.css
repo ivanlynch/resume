@@ -15,6 +15,11 @@
 }
 
 @layer base {
+  ::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+  }
+
   html {
     @apply h-screen w-screen scroll-smooth bg-slate-200 dark:bg-slate-900 dark:text-slate-200;
   }
@@ -40,9 +45,11 @@
   .subtitle {
     @apply font-medium leading-tight text-4xl;
   }
-  .info {
-    @apply text-xl font-normal;
+
+  .screen-container {
+    @apply flex flex-col justify-center items-center h-screen;
   }
+
   .profile {
     @apply mt-4;
   }
@@ -56,7 +63,7 @@
   }
 
   .nav-links {
-    @apply flex flex-col justify-center items-center w-full text-2xl text-white;
+    @apply flex flex-col md:flex-row md:text-base gap-10 justify-center items-center w-full text-2xl text-white;
   }
 
   .links {
