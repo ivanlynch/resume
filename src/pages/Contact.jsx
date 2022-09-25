@@ -1,5 +1,5 @@
 import { EnvelopeIcon, CalendarIcon } from "@heroicons/react/24/outline";
-import { CardButton, Text, Title, Page } from "components";
+import { CardButton, Title, Page } from "components";
 import { Size } from "constants";
 import React from "react";
 
@@ -16,12 +16,12 @@ function Contact() {
 
   return (
     <Page id={"contact"}>
-      <div className="h-screen w-full flex flex-col justify-center items-start">
+      <div className="h-screen landscape:my-16 w-full flex flex-col justify-center items-start">
         <Title size={Size.H1}>Get In Touch</Title>
-        <Text>
+        <p className="paragraph mb-4">
           I'm always open to new opportunities, so if you have any questions or
           have a project you'd like to discuss, please feel free to contact me.
-        </Text>
+        </p>
         <div className="w-full flex gap-10 md:scale-100 scale-75 -m-10 md:m-0">
           <CardButton
             onClick={handleSendMail}
@@ -29,6 +29,7 @@ function Contact() {
             icon={<EnvelopeIcon height={"12rem"} />}
           />
           <CardButton
+            disabled={true}
             onClick={handleGoToCalendar}
             text={"Schedule a meeting"}
             icon={<CalendarIcon height={"12rem"} />}

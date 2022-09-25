@@ -3,7 +3,15 @@ import React from "react";
 
 const variants = {
   initial: { opacity: 0 },
-  animate: { opacity: 1 },
+  animate: {
+    opacity: 1,
+    y: 50,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
   transition: { duration: 1 },
 };
 
@@ -13,10 +21,12 @@ function Page({ children, id, className }) {
       id={id}
       initial="initial"
       whileInView="animate"
-      transition={{ duration: 1 }}
+      transition="transition"
       viewport={{ once: true, amount: 0.5 }}
       variants={variants}
-      className="px-6 md:px-0"
+      className={`px-6 md:px-0 landscape:scroll-mt-8 ${
+        id === "home" ? "scroll-mt-16 md:scroll-mt-0" : ""
+      } `}
     >
       {children}
     </motion.div>

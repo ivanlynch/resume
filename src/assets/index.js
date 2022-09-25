@@ -1,5 +1,3 @@
-import { work } from "./work/work";
+import { work } from "./data/work";
 
-export {
-    work
-}
+export { work };

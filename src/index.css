@@ -42,12 +42,17 @@
   .title {
     @apply font-medium leading-tight text-4xl md:text-5xl lg:text-5xl;
   }
+
   .subtitle {
     @apply font-medium leading-tight text-4xl;
   }
 
+  .paragraph {
+    @apply text-lg text-slate-400;
+  }
+
   .screen-container {
-    @apply flex flex-col justify-center items-center h-screen;
+    @apply flex flex-col justify-center items-center h-screen landscape:h-full landscape:mb-12 bg-rose-400;
   }
 
   .profile {
