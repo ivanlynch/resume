@@ -6,7 +6,7 @@ export const work = [
     from: "2022",
     to: "Present",
     description:
-      "I worked as a senior software developer in different projects. I was responsible for the development of the frontend and backend of the projects. I also worked on the design of the projects.",
+      "I worked in the SaaS product development team, with scrum methodology for planning and execution of the development of new features.",
     technologies: ["React", "React Native", "TypeScript", "AWS"],
   },
   {

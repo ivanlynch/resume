@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Divider, Navbar } from "components";
 import { AppContextProvider } from "contexts";
 import { About, Contact, Experience, Home } from "pages";
 
 function App() {
+  useEffect(() => {
+    window.location.hash = "#home";
+  }, []);
+
   return (
     <AppContextProvider>
       <Navbar />

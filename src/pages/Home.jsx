@@ -2,12 +2,9 @@ import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 import { Button, Page } from "components";
 function Home() {
   const onButtonClick = () => {
-    // using Java Script method to get PDF file
     fetch("/assets/resumes/ivanlynch-en.pdf").then((response) => {
       response.blob().then((blob) => {
-        // Creating new object of PDF file
         const fileURL = window.URL.createObjectURL(blob);
-        // Setting various property values
         let alink = document.createElement("a");
         alink.href = fileURL;
         alink.download = "ivanlynch-en.pdf";
@@ -18,7 +15,7 @@ function Home() {
 
   return (
     <Page id={"home"}>
-      <div className="h-screen w-full md:-mt-[10vh] landscape:mb-12 flex flex-col justify-center items-center">
+      <div className="h-screen w-full landscape:mb-12 flex flex-col justify-center items-center">
         <div className="flex p-12 md:p-0 w-full md:w-[90%] md:h-[50%] justify-center items-center overflow-hidden gap-y-4 flex-col landscape:flex-wrap md:flex-wrap">
           <div className="md:w-[49%] landscape:w-[49%] order-1">
             <p className="title whitespace-nowrap md:text-left">
