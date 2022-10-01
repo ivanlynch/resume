@@ -24,7 +24,9 @@ This is a real resume project intendeed to be short and just giving the needed i
 ## 📁 Resources
 In the directory **public/assets/resumes** you will find my resume in different languages that i created with figma here is the figma project
 
-[<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FFkksYtQGEKwXwk2BduLLaO%2FCVS" allowfullscreen></iframe>](https://www.figma.com/community/file/1158129471036566768)
+<div>
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FFkksYtQGEKwXwk2BduLLaO%2FCVS" allowfullscreen></iframe>
+</div>
 
 
 ****
