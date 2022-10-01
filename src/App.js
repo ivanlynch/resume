@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar } from "components";
+import { Divider, Navbar } from "components";
 import { AppContextProvider } from "contexts";
 import { About, Contact, Experience, Home } from "pages";
 
@@ -7,10 +7,15 @@ function App() {
   return (
     <AppContextProvider>
       <Navbar />
-      <Home />
-      <About />
-      <Experience />
-      <Contact />
+      <div className="md:w-[65vw] mx-auto flex flex-col justify-center items-center mt-[10vh]">
+        <Home />
+        <Divider />
+        <About />
+        <Divider />
+        <Experience />
+        <Divider />
+        <Contact />
+      </div>
     </AppContextProvider>
   );
 }

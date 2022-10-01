@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full flex bg-slate-900 justify-center h-[10%] fixed top-0 left-0 right-0 shadow-2xl z-[calc(9e998)]`}
+      className={`w-screen flex bg-slate-900 justify-center h-[10vh] fixed top-0 shadow-2xl z-[calc(9e998)]`}
     >
       <nav
         className="flex justify-end items-center pr-4 md:hidden w-full"
@@ -42,7 +42,7 @@ const Navbar = () => {
           {isMenuClicked ? <Times height={40} /> : <Bars height={40} />}
         </div>
       </nav>
-      <nav className="hidden md:flex justify-between items-center font-medium cursor-pointer gap-10 text-slate-50">
+      <nav className="w-full hidden md:flex justify-between items-center font-medium cursor-pointer gap-10 text-slate-50">
         <Links handleActiveLink={handleActiveLink} onClick={handleNavigation} />
       </nav>
       <SideMenu isOpen={isMenuClicked}>

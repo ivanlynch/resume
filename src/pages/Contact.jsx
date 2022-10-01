@@ -16,7 +16,7 @@ function Contact() {
 
   return (
     <Page id={"contact"}>
-      <div className="h-screen landscape:my-16 w-full flex flex-col justify-center items-start">
+      <div className="h-screen landscape:my-16 w-full md:flex md:flex-col md:justify-center ,md:items-center ">
         <Title size={Size.H1}>Get In Touch</Title>
         <p className="paragraph mb-4">
           I'm always open to new opportunities, so if you have any questions or

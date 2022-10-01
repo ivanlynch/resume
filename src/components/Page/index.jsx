@@ -24,9 +24,7 @@ function Page({ children, id, className }) {
       transition="transition"
       viewport={{ once: true, amount: 0.5 }}
       variants={variants}
-      className={`px-6 md:px-0 landscape:scroll-mt-8 ${
-        id === "home" ? "scroll-mt-16 md:scroll-mt-0" : ""
-      } `}
+      className={`px-6 md:px-0 scroll-mt-[10vh] w-full`}
     >
       {children}
     </motion.div>

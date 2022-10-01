@@ -3,7 +3,7 @@ import { Page, List } from "components";
 function About() {
   return (
     <Page id={"about"}>
-      <div className="landscape:my-16 h-screen flex grow flex-col justify-center items-start">
+      <div className="landscape:my-16 h-screen md:flex md:flex-col md:justify-center md:items-start">
         <p className="paragraph">
           Hey! I'm <b className="text-yellow-400">Iván Lynch</b>, an{" "}
           <b>Argentinian</b>

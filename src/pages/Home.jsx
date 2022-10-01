@@ -18,19 +18,21 @@ function Home() {
 
   return (
     <Page id={"home"}>
-      <div className="w-full landscape:mb-12 mt-20 h-screen flex flex-col justify-center items-center">
-        <div className="grid grid-cols-12 md:gap-4 w-full">
-          <p className="title whitespace-nowrap col-span-full row-start-1 row-end-2 md:col-span-7 md:col-start-1 md:col-end-12 text-center md:text-left">
-            Hello! I'm<span className="ml-2 text-yellow-400">Iván</span>. 👋
-          </p>
-          <p className="text-xl row-start-2 row-end-3 text-center md:text-left text-rose-400 whitespace-nowrap col-span-full md:col-start-1 md:col-end-7 md:col-span-7">
-            I build things writing code.
-          </p>
-          <p className="md:col-start-1 row-start-4 row-end-5 md:row-start-3 md:row-end-4 md:col-span-7 md:col-end-7 col-span-full w-full text-center md:text-left paragraph">
+      <div className="h-screen w-full md:-mt-[10vh] landscape:mb-12 flex flex-col justify-center items-center">
+        <div className="flex p-12 md:p-0 w-full md:w-[90%] md:h-[50%] justify-center items-center overflow-hidden gap-y-4 flex-col landscape:flex-wrap md:flex-wrap">
+          <div className="md:w-[49%] landscape:w-[49%] order-1">
+            <p className="title whitespace-nowrap md:text-left">
+              Hello! I'm<span className="ml-2 text-yellow-400">Iván</span>. 👋
+            </p>
+            <p className="text-xl text-center md:text-left text-rose-400 whitespace-nowrap">
+              I build things writing code.
+            </p>
+          </div>
+          <p className="md:w-[49%] landscape:w-[49%] w-full order-2 text-center md:text-left paragraph">
             I'm self taught developer, Enthusiast, Curious, Dad, Husband,
             Argentinian.
           </p>
-          <p className="md:col-span-7 justify-self-center md:justify-self-start col-span-full md:col-start-1 md:row-start-4 mt-4 w-2/3">
+          <p className="md:w-[49%] landscape:w-[49%] w-full order-4 landscape:order-3 md:order-3 mt-4">
             <Button
               icon={<ArrowDownTrayIcon height={"1.1rem"} />}
               text="Get my resume"
@@ -39,7 +41,7 @@ function Home() {
               fontSize={`text-lg`}
             />
           </p>
-          <div className="md:col-start-8  justify-center md:flex row-start-3 col-start col-span-full md:col-end-12 md:col-span-5 md:row-start-1 md:row-end-6 flex w-full">
+          <div className="md:w-[30%] landscape:w-[40%] order-3 landscape:order-3 md:order-4">
             <picture>
               <source
                 media="(min-width:640px)"

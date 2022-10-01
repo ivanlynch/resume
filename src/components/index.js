@@ -8,8 +8,10 @@ import Tabs from "./Tabs";
 import Image from "./Image";
 import CardButton from "./CardButton";
 import List from "./List";
+import Divider from "./Divider";
 
 export {
+  Divider,
   CardButton,
   Button,
   Navbar,

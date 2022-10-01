@@ -7,7 +7,7 @@ const Work = () => {
 
   return (
     <Page id={"experience"}>
-      <div className="landscape:my-16 h-screen md:flex md:flex-col md:justify-center md:items-center pt-20 sm:pt-0">
+      <div className="landscape:my-16 overflow-hidden h-screen md:flex md:flex-col md:justify-center md:items-center sm:pt-0">
         <Tabs data={work} />
       </div>
     </Page>
